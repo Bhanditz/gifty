@@ -53,12 +53,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 /**
     Activities
 **/
-.activities-card{
-  box-shadow: inset 0 4px 0px 0px #33cd5f;
+
+.activities{
+  text-decoration: none;
+
+  .activities-card{
+    box-shadow: inset 0 4px 0px 0px #33cd5f;
+  }
+
+  .activities-header-card{
+    direction: rtl;
+  }
 }
-
-.activities-header-card{
-  direction: rtl;
-}
-
-

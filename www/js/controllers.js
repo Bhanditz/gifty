@@ -61,16 +61,23 @@ angular.module('starter.controllers', [])
     };
   })
 
-  .controller('ActivitiesCtrl', function ($scope, $stateParams) {
+  .controller('ActivitiesCtrl', function () {
     var vm = this;
+
     vm.activities = [];
     for (var i = 0; i < 10; i++) {
       vm.activities.push({
+        id: i,
         shopName: 'Castro' + i,
         price: i * 100,
         dateAndTime: "20-03-2016 12:00"
       });
     }
+
+  })
+
+  .controller('ActivityCtrl', function () {
+    var vm = this;
 
   })
 

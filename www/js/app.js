@@ -48,7 +48,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         views: {
           'menuContent': {
             templateUrl: 'templates/activities.html',
-            controller:'ActivitiesCtrl as activitiesCtrl'
+            controller: 'ActivitiesCtrl as activitiesCtrl'
+          }
+        }
+      })
+
+      .state('app.activity', {
+        url: '/activities/:activityId',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/activity.html',
+            controller: 'ActivityCtrl as activityCtrl'
           }
         }
       })
@@ -61,6 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
           }
         }
       })
+
       .state('app.playlists', {
         url: '/playlists',
         views: {
@@ -80,6 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
           }
         }
       });
+    
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/playlists');
+    $urlRouterProvider.otherwise('/app/activities');
   });

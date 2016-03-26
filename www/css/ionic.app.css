@@ -9756,8 +9756,9 @@ a.button {
 /**
     Activities
 **/
-.activities-card {
-  box-shadow: inset 0 4px 0px 0px #33cd5f; }
-
-.activities-header-card {
-  direction: rtl; }
+.activities {
+  text-decoration: none; }
+  .activities .activities-card {
+    box-shadow: inset 0 4px 0px 0px #33cd5f; }
+  .activities .activities-header-card {
+    direction: rtl; }
