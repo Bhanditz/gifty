@@ -7,7 +7,11 @@ angular.module('starter')
       sendCard: "שליחת כרטיס",
       billingInformation: "פרטי חיוב",
       settings: "הגדרות",
+      advancedSettings: "הגדרות מתקדמות",
+      advancedAccount: "הגדרות חשבון",
       logOut: "יציאה",
-      nis: 'ש"ח'
+      nis: 'ש"ח',
+      passCode:'כניסה מהירה',
+      language:'שפה'
     }
   });

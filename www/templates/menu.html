@@ -34,14 +34,19 @@
           <i class="ion-cash"></i>
           {{:: app.dictionary.billingInformation}}
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
+
+        <!--Settings-->
+        <ion-item menu-close href="#/app/settings">
           <i class="ion-gear-b"></i>
           {{:: app.dictionary.settings}}
         </ion-item>
-        <ion-item ng-click="logout()" menu-close href="#/app/playlists">
+
+        <!--Logout-->
+        <ion-item ng-click="logout()" menu-close>
           <i class="ion-log-out"></i>
           {{:: app.dictionary.logOut}}
         </ion-item>
+
       </ion-list>
     </ion-content>
   </ion-side-menu>

@@ -90,8 +90,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
             controller: 'PlaylistCtrl'
           }
         }
+      })
+
+      .state('app.settings', {
+        url: '/settings',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/settings.html',
+            controller: 'SettingsCtrl as settingsCtrl'
+          }
+        }
       });
-    
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/activities');
   });

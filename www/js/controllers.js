@@ -81,6 +81,11 @@ angular.module('starter.controllers', [])
 
   })
 
+
+  .controller('SettingsCtrl', function () {
+    var vm = this;
+  })
+
   .controller('PlaylistsCtrl', function ($scope) {
     $scope.playlists = [
       {title: 'Reggae', id: 1},
