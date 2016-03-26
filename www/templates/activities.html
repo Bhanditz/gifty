@@ -1,0 +1,16 @@
+<ion-view view-title="{{:: app.dictionary.activities}}">
+  <ion-content>
+    <div class="card" ng-repeat="card in [1000,2,3,4,5,6,7,8]">
+      <div class="item item-divider activities-header-card">
+          {{'Casponet'}}
+      </div>
+      <div class="item item-text-wrap activities-card">
+        <span class="float-left">{{app.dictionary.nis}}</span>
+        <span>{{'&nbsp' + card}}</span>
+        <span class="float-right">{{'07-11-2012 12:00'}}</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+

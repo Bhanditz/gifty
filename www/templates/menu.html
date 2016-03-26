@@ -1,0 +1,50 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">{{:: app.dictionary.menu}}</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/activities">
+          <i class="ion-arrow-swap"></i>
+          {{:: app.dictionary.activities}}
+        </ion-item>
+        <ion-item menu-close href="#/app/search">
+          <i class="ion-card"></i>
+          {{:: app.dictionary.loadCard}}
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          <i id="left-menu-send-card" class="ion-card"></i>
+          {{:: app.dictionary.sendCard}}
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          <i class="ion-cash"></i>
+          {{:: app.dictionary.billingInformation}}
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          <i class="ion-gear-b"></i>
+          {{:: app.dictionary.settings}}
+        </ion-item>
+        <ion-item ng-click="logout()" menu-close href="#/app/playlists">
+          <i class="ion-log-out"></i>
+          {{:: app.dictionary.logOut}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+
+

@@ -1,0 +1,12 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "ionic-lock-screen": "~1.0.1",
+    "js-md5": "md5#~0.3.0"
+
+  }
+}
