@@ -1,0 +1,17 @@
+<ion-modal-view>
+
+    <!--Header-->
+    <ion-header-bar>
+        <h1 class="title">{{:: app.dictionary.passCode}}</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="settingsCtrl.closePassCodeModal()">
+                <i class="ion-close-round"></i>
+            </button>
+        </div>
+    </ion-header-bar>
+
+    <!--Pass Code Modal Setting-->
+    <ion-content>
+        <pass-code on-set-new-pass-code-done="settingsCtrl.closePassCodeModal()"></pass-code>
+    </ion-content>
+</ion-modal-view>

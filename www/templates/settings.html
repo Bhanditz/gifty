@@ -8,7 +8,7 @@
       </div>
 
       <!--Pass Code-->
-      <ion-item>
+      <ion-item ng-click="settingsCtrl.openPassCodeModal()">
         <i class="ion-grid"></i>
         {{:: app.dictionary.passCode}}
       </ion-item>
@@ -21,7 +21,7 @@
 
 
 
-      <!--Advanced Settings Divider-->
+      <!--Advanced Account Divider-->
       <div class="item item-divider">
         {{:: app.dictionary.advancedAccount}}
       </div>

@@ -12,6 +12,11 @@ angular.module('starter')
       logOut: "יציאה",
       nis: 'ש"ח',
       passCode:'כניסה מהירה',
-      language:'שפה'
+      language:'שפה',
+      enterPassword:'הכנס סיסמא',
+      reEnterPassword:'אמת סיסמא',
+    },
+    localStorageKeys:{
+      userPassCode:"userPassCode"
     }
   });

@@ -6,18 +6,22 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
 
-  .run(function ($ionicPlatform, $lockScreen) {
+  .run(function ($ionicPlatform, $lockScreen, $localStorage, appConst) {
     $ionicPlatform.ready(function () {
 
-      $lockScreen.show({
-        code: md5('1234'),
-        onCorrect: function () {
-          console.log('correct!');
-        },
-        onWrong: function (attemptNumber) {
-          console.log(attemptNumber + ' wrong passcode attempt(s)');
-        }
-      });
+      var userPassCode = $localStorage.get(appConst.localStorageKeys.userPassCode);
+      if(userPassCode){
+        $lockScreen.show({
+          code: userPassCode,
+          onCorrect: function () {
+            console.log('correct!');
+          },
+          onWrong: function (attemptNumber) {
+            console.log(attemptNumber + ' wrong passcode attempt(s)');
+          }
+        });
+      }
+
 
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
