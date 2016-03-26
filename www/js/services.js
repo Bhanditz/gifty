@@ -12,6 +12,14 @@ angular.module('starter')
       },
       getObject: function(key) {
         return JSON.parse($window.localStorage[key] || '{}');
-      }
+      },
+      remove:function(key){
+        $window.localStorage.removeItem(key);
+      },
+      removeAll:function(keys){
+        for(var key in keys){
+          $window.localStorage.removeItem(key);
+        }        
+      }      
     }
   }]);

@@ -21,8 +21,11 @@ function PassCodeCtrl($scope, appConst, $localStorage, $timeout) {
 
     var userPassCode = appConst.localStorageKeys.userPassCode,
         isSecondTime = false,
-        secondEnteredPasscode;
-    $scope.message = appConst.dictionary.enterPassword;
+        isUserPassCodeExist = $localStorage.get(appConst.localStorageKeys.userPassCode),
+        secondEnteredPassCode;
+
+
+    $scope.message = isUserPassCodeExist ? appConst.dictionary.removePassCode : appConst.dictionary.enterPassword;
 
 
     $scope.enteredPasscode = '';
@@ -32,17 +35,27 @@ function PassCodeCtrl($scope, appConst, $localStorage, $timeout) {
 
         $scope.enteredPasscode += '' + digit;
         if ($scope.enteredPasscode.length >= 4) {
-            if (isSecondTime) {
+            if (isUserPassCodeExist) {
+                $scope.passcodeWrong = isUserPassCodeExist !== encrypt($scope.enteredPasscode);
+                if ($scope.passcodeWrong) {
+                    $scope.enteredPasscode = '';
+                }
+                else {
+                    $localStorage.remove(userPassCode);
+                    $scope.onSetNewPassCodeDone();
+                }
+            }
+            else if (isSecondTime) {
 
-                $scope.passcodeWrong = secondEnteredPasscode !== $scope.enteredPasscode;
+                $scope.passcodeWrong = secondEnteredPassCode !== $scope.enteredPasscode;
                 if ($scope.passcodeWrong) {
                     isSecondTime = false;
                     $scope.enteredPasscode = '';
-                    secondEnteredPasscode = undefined;
+                    secondEnteredPassCode = undefined;
                     $scope.message = appConst.dictionary.enterPassword;
                 }
                 else {
-                    $localStorage.set(userPassCode, md5($scope.enteredPasscode));
+                    $localStorage.set(userPassCode, encrypt($scope.enteredPasscode));
                     $scope.onSetNewPassCodeDone();
                 }
 
@@ -50,7 +63,7 @@ function PassCodeCtrl($scope, appConst, $localStorage, $timeout) {
             else {
                 $timeout(function () {
                     isSecondTime = true;
-                    secondEnteredPasscode = $scope.enteredPasscode;
+                    secondEnteredPassCode = $scope.enteredPasscode;
                     $scope.enteredPasscode = '';
                     $scope.message = appConst.dictionary.reEnterPassword;
                 }, 200);
@@ -58,4 +71,8 @@ function PassCodeCtrl($scope, appConst, $localStorage, $timeout) {
 
         }
     };
+
+    function encrypt(val) {
+        return md5(val);
+    }
 }

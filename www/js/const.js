@@ -15,6 +15,9 @@ angular.module('starter')
       language:'שפה',
       enterPassword:'הכנס סיסמא',
       reEnterPassword:'אמת סיסמא',
+      removePassCode:'הסרת כניסה מהירה',
+      home:'בית',
+      cardBalance:'יתרת כרטיס'
     },
     localStorageKeys:{
       userPassCode:"userPassCode"

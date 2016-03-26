@@ -9747,6 +9747,17 @@ a.button {
   transform: rotate(45deg); }
 
 /**
+    Home (Card balance)
+**/
+.home-card-balance {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/**
     Pass Code
 **/
 .ILS_digit {

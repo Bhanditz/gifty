@@ -24,28 +24,41 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 /**
     Common
 **/
-.float-left{
+.float-left {
   float: left;
 }
 
-.float-right{
+.float-right {
   float: right;
 }
-
 
 /**
     Left Menu
 **/
 
-#left-menu-send-card::before{
+#left-menu-send-card::before {
   transform: rotate(45deg);
+}
+
+/**
+    Home (Card balance)
+**/
+
+.home-card-balance {
+
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 /**
     Pass Code
 **/
-.ILS_digit{
+.ILS_digit {
   border-radius: 50% !important;
   box-shadow: 1px 1px 3px;
 }
@@ -54,14 +67,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     Activities
 **/
 
-.activities{
+.activities {
   text-decoration: none;
 
-  .activities-card{
+  .activities-card {
     box-shadow: inset 0 4px 0px 0px #33cd5f;
   }
 
-  .activities-header-card{
+  .activities-header-card {
     direction: rtl;
   }
 }

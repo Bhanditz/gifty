@@ -1,5 +1,6 @@
 angular.module('starter.controllers', [])
 
+    // Root app + Menu
     .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicLoading, $localStorage, $ionicHistory, appConst) {
 
         // With the new view caching in Ionic, Controllers are only called
@@ -17,6 +18,7 @@ angular.module('starter.controllers', [])
         $scope.logout = function () {
             $ionicLoading.show({template: 'Logging out....'});
             $localStorage.set('loggin_state', '');
+            $localStorage.removeAll(appConst.localStorageKeys);
 
             $timeout(function () {
                 $ionicLoading.hide();
@@ -61,6 +63,7 @@ angular.module('starter.controllers', [])
         };
     })
 
+    // Activities
     .controller('ActivitiesCtrl', function () {
         var vm = this;
 
@@ -82,16 +85,39 @@ angular.module('starter.controllers', [])
     })
 
 
+    // Home
+    .controller('HomeCtrl', function () {
+        var vm = this;
+        vm.activities = [];
+        for (var i = 0; i < 10; i++) {
+            vm.activities.push({
+                id: i,
+                shopName: 'Castro' + i,
+                price: i * 100,
+                dateAndTime: "20-03-2016 12:00"
+            });
+        }
+
+    })
+
+
+    // Settings
     .controller('SettingsCtrl', function ($ionicModal, $scope) {
         var vm = this;
         vm.passCodeData ={};
 
-        // Create the pass code modal
-        $ionicModal.fromTemplateUrl('templates/passCodeSetting.html', {
-            scope: $scope
-        }).then(function (modal) {
-            $scope.passCodeModal = modal;
-        });
+        createPassCodeModal();
+
+        function createPassCodeModal(){
+            // Create the pass code modal
+            $ionicModal.fromTemplateUrl('templates/passCodeSetting.html', {
+                scope: $scope,
+                animation: 'slide-in-up'
+            }).then(function (modal) {
+                $scope.passCodeModal = modal;
+            });
+        }
+
 
         vm.openPassCodeModal = function () {
             $scope.passCodeModal.show();
@@ -99,8 +125,21 @@ angular.module('starter.controllers', [])
 
         vm.closePassCodeModal = function () {
             $scope.passCodeModal.hide();
+            $scope.passCodeModal.remove();
+            createPassCodeModal();
         };
+
     })
+
+
+
+
+
+
+
+
+
+
 
     .controller('PlaylistsCtrl', function ($scope) {
         $scope.playlists = [
