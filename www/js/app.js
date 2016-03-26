@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         views: {
           'menuContent': {
             templateUrl: 'templates/activities.html',
-            controller:'ActivitiesCtrl as activities'
+            controller:'ActivitiesCtrl as activitiesCtrl'
           }
         }
       })

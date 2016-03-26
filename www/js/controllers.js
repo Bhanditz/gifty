@@ -61,6 +61,19 @@ angular.module('starter.controllers', [])
     };
   })
 
+  .controller('ActivitiesCtrl', function ($scope, $stateParams) {
+    var vm = this;
+    vm.activities = [];
+    for (var i = 0; i < 10; i++) {
+      vm.activities.push({
+        shopName: 'Castro' + i,
+        price: i * 100,
+        dateAndTime: "20-03-2016 12:00"
+      });
+    }
+
+  })
+
   .controller('PlaylistsCtrl', function ($scope) {
     $scope.playlists = [
       {title: 'Reggae', id: 1},
