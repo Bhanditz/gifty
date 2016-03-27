@@ -88,16 +88,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
                         controller: 'ActivityCtrl as activityCtrl'
                     }
                 }
-            })
-
-            .state('app.browse', {
-                url: '/browse',
-                views: {
-                    'menuContent': {
-                        templateUrl: 'templates/browse.html'
-                    }
-                }
-            })
+            })           
 
             .state('app.playlists', {
                 url: '/playlists',
