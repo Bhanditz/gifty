@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
     // Root app + Menu
-    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicLoading, $localStorage, $ionicHistory, appConst) {
+    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicLoading, $localStorage, $ionicHistory, appConst, $state) {
 
         // With the new view caching in Ionic, Controllers are only called
         // when they are recreated or on app start, instead of every page change.
@@ -12,12 +12,16 @@ angular.module('starter.controllers', [])
 
         var vm = this;
         vm.dictionary = appConst.dictionary;
-        vm.userSetup = {showPassCode: true};
-        $scope.navTitle = '<img class="ion-arrow-swap" />';
+        vm.localStorageKeys = appConst.localStorageKeys;
+        var loginState =  $localStorage.get(vm.localStorageKeys.loginState);
+        if(!loginState){
+            $state.go('app.registration');
+        }
+
 
         $scope.logout = function () {
             $ionicLoading.show({template: 'Logging out....'});
-            $localStorage.set('loggin_state', '');
+            $localStorage.set(vm.dictionary.localStorageKeys.loginState, false);
             $localStorage.removeAll(appConst.localStorageKeys);
 
             $timeout(function () {
@@ -84,6 +88,12 @@ angular.module('starter.controllers', [])
 
     })
 
+    // Registration
+    .controller('RegistrationCtrl', function () {
+        var vm = this;
+
+
+    })
 
     // Home
     .controller('HomeCtrl', function () {
@@ -104,11 +114,11 @@ angular.module('starter.controllers', [])
     // Settings
     .controller('SettingsCtrl', function ($ionicModal, $scope) {
         var vm = this;
-        vm.passCodeData ={};
+        vm.passCodeData = {};
 
         createPassCodeModal();
 
-        function createPassCodeModal(){
+        function createPassCodeModal() {
             // Create the pass code modal
             $ionicModal.fromTemplateUrl('templates/passCodeSetting.html', {
                 scope: $scope,
@@ -130,15 +140,6 @@ angular.module('starter.controllers', [])
         };
 
     })
-
-
-
-
-
-
-
-
-
 
 
     .controller('PlaylistsCtrl', function ($scope) {

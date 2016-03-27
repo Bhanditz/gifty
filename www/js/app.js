@@ -7,8 +7,8 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
 
     .run(function ($ionicPlatform, $lockScreen, $localStorage, appConst) {
-        $ionicPlatform.ready(function () {
-
+        $ionicPlatform.ready(function () {            
+            
             var userPassCode = $localStorage.get(appConst.localStorageKeys.userPassCode);
             if (userPassCode) {
                 $lockScreen.show({
@@ -46,6 +46,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
                 abstract: true,
                 templateUrl: 'templates/menu.html',
                 controller: 'AppCtrl as app'
+            })
+                
+            //    User Registration
+            .state('app.registration', {
+                url: '/registration',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/registration.html',
+                        controller: 'RegistrationCtrl as registrationCtrl'
+                    }
+                }
             })
 
             // Home

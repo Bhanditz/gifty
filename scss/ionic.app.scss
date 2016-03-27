@@ -32,6 +32,22 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   float: right;
 }
 
+.text-direction {
+  direction: rtl;
+}
+
+
+/**
+    Registration
+**/
+
+.registration-input-label.input-label{
+  float: right;
+  padding-right: 24px;
+  direction: rtl;
+}
+
+
 /**
     Left Menu
 **/

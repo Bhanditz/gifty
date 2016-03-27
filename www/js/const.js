@@ -17,9 +17,19 @@ angular.module('starter')
       reEnterPassword:'אמת סיסמא',
       removePassCode:'הסרת כניסה מהירה',
       home:'בית',
-      cardBalance:'יתרת כרטיס'
+      cardBalance:'יתרת כרטיס',
+      activity:'פעילות',
+      userRegistration:'רישום משתמש',
+      email:'מייל',
+      password:'סיסמא',
+      mobile:'נייד',
+      dateOfBirth:'תאריך לידה',
+      agreeToTermsAndConditions:'מסכים לתקנון',
+      registration:'הירשם'
+      
     },
     localStorageKeys:{
-      userPassCode:"userPassCode"
+      userPassCode:"userPassCode",
+      loginState:"loginState"
     }
   });
