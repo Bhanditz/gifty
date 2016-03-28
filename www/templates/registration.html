@@ -30,12 +30,11 @@
 
         </ion-list>
 
-
         <!--Agree to Terms and Conditions-->
-        <ion-checkbox class="" ng-model="filter.blue">{{:: app.dictionary.agreeToTermsAndConditions}}</ion-checkbox>
+        <ion-checkbox class="agree-to-terms-and-conditions" ng-model="filter.blue">{{:: app.dictionary.agreeToTermsAndConditions}}</ion-checkbox>
 
         <!--Registration-->
-        <button class="button button-outline button-block button-light">
+        <button class="button button-outline button-block button-light" ng-click="registrationCtrl.onRegistrationClick()">
             {{:: app.dictionary.registration}}
         </button>
 

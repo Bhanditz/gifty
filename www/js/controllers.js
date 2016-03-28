@@ -1,158 +1,176 @@
 angular.module('starter.controllers', [])
 
-    // Root app + Menu
-    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicLoading, $localStorage, $ionicHistory, appConst, $state) {
+  // Root app + Menu
+  .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $ionicLoading, $localStorage, $ionicHistory, appConst, $state) {
 
-        // With the new view caching in Ionic, Controllers are only called
-        // when they are recreated or on app start, instead of every page change.
-        // To listen for when this page is active (for example, to refresh data),
-        // listen for the $ionicView.enter event:
-        //$scope.$on('$ionicView.enter', function(e) {
-        //});
+    // With the new view caching in Ionic, Controllers are only called
+    // when they are recreated or on app start, instead of every page change.
+    // To listen for when this page is active (for example, to refresh data),
+    // listen for the $ionicView.enter event:
+    //$scope.$on('$ionicView.enter', function(e) {
+    //});
 
-        var vm = this;
-        vm.dictionary = appConst.dictionary;
-        vm.localStorageKeys = appConst.localStorageKeys;
-        var loginState =  $localStorage.get(vm.localStorageKeys.loginState);
-        if(!loginState){
-            $state.go('app.registration');
-        }
+    var vm = this;
+    vm.dictionary = appConst.dictionary;
+    vm.localStorageKeys = appConst.localStorageKeys;
+    var loginState = $localStorage.get(vm.localStorageKeys.loginState);
+    if (!loginState) {
+      $state.go('app.registration');
+    }
 
 
-        $scope.logout = function () {
-            $ionicLoading.show({template: 'Logging out....'});
-            $localStorage.set(vm.dictionary.localStorageKeys.loginState, false);
-            $localStorage.removeAll(appConst.localStorageKeys);
+    $scope.logout = function () {
+      $ionicLoading.show({template: 'Logging out....'});
+      $localStorage.set(vm.dictionary.localStorageKeys.loginState, false);
+      $localStorage.removeAll(appConst.localStorageKeys);
 
-            $timeout(function () {
-                $ionicLoading.hide();
-                $ionicHistory.clearCache();
-                $ionicHistory.clearHistory();
-                $ionicHistory.nextViewOptions({disableBack: true, historyRoot: true});
-                $scope.login();
-                //$state.go('login');
-            }, 30);
+      $timeout(function () {
+        $ionicLoading.hide();
+        $ionicHistory.clearCache();
+        $ionicHistory.clearHistory();
+        $ionicHistory.nextViewOptions({disableBack: true, historyRoot: true});
+        $scope.login();
+        //$state.go('login');
+      }, 30);
 
-        };
+    };
 
-        // Form data for the login modal
-        $scope.loginData = {};
+    // Form data for the login modal
+    $scope.loginData = {};
 
-        // Create the login modal that we will use later
-        $ionicModal.fromTemplateUrl('templates/login.html', {
-            scope: $scope
-        }).then(function (modal) {
-            $scope.modal = modal;
-        });
+    // Create the login modal that we will use later
+    $ionicModal.fromTemplateUrl('templates/login.html', {
+      scope: $scope
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
 
-        // Triggered in the login modal to close it
-        $scope.closeLogin = function () {
-            $scope.modal.hide();
-        };
+    // Triggered in the login modal to close it
+    $scope.closeLogin = function () {
+      $scope.modal.hide();
+    };
 
-        // Open the login modal
-        $scope.login = function () {
-            $scope.modal.show();
-        };
+    // Open the login modal
+    $scope.login = function () {
+      $scope.modal.show();
+    };
 
-        // Perform the login action when the user submits the login form
-        $scope.doLogin = function () {
-            console.log('Doing login', $scope.loginData);
+    // Perform the login action when the user submits the login form
+    $scope.doLogin = function () {
+      console.log('Doing login', $scope.loginData);
 
-            // Simulate a login delay. Remove this and replace with your login
-            // code if using a login system
-            $timeout(function () {
-                $scope.closeLogin();
-            }, 1000);
-        };
-    })
+      // Simulate a login delay. Remove this and replace with your login
+      // code if using a login system
+      $timeout(function () {
+        $scope.closeLogin();
+      }, 1000);
+    };
+  })
 
-    // Activities
-    .controller('ActivitiesCtrl', function () {
-        var vm = this;
+  // Activities
+  .controller('ActivitiesCtrl', function () {
+    var vm = this;
 
-        vm.activities = [];
-        for (var i = 0; i < 10; i++) {
-            vm.activities.push({
-                id: i,
-                shopName: 'Castro' + i,
-                price: i * 100,
-                dateAndTime: "20-03-2016 12:00"
-            });
-        }
+    vm.activities = [];
+    for (var i = 0; i < 10; i++) {
+      vm.activities.push({
+        id: i,
+        shopName: 'Castro' + i,
+        price: i * 100,
+        dateAndTime: "20-03-2016 12:00"
+      });
+    }
 
-    })
+  })
 
-    .controller('ActivityCtrl', function () {
-        var vm = this;
+  .controller('ActivityCtrl', function () {
+    var vm = this;
 
-    })
+  })
 
     // Registration
-    .controller('RegistrationCtrl', function () {
+    .controller('RegistrationCtrl', function ($state) {
         var vm = this;
-
-
-    })
-
-    // Home
-    .controller('HomeCtrl', function () {
-        var vm = this;
-        vm.activities = [];
-        for (var i = 0; i < 10; i++) {
-            vm.activities.push({
-                id: i,
-                shopName: 'Castro' + i,
-                price: i * 100,
-                dateAndTime: "20-03-2016 12:00"
-            });
-        }
-
-    })
-
-
-    // Settings
-    .controller('SettingsCtrl', function ($ionicModal, $scope) {
-        var vm = this;
-        vm.passCodeData = {};
-
-        createPassCodeModal();
-
-        function createPassCodeModal() {
-            // Create the pass code modal
-            $ionicModal.fromTemplateUrl('templates/passCodeSetting.html', {
-                scope: $scope,
-                animation: 'slide-in-up'
-            }).then(function (modal) {
-                $scope.passCodeModal = modal;
-            });
-        }
-
-
-        vm.openPassCodeModal = function () {
-            $scope.passCodeModal.show();
+        vm.onRegistrationClick = function () {
+          $state.go('app.home');
         };
 
-        vm.closePassCodeModal = function () {
-            $scope.passCodeModal.hide();
-            $scope.passCodeModal.remove();
-            createPassCodeModal();
-        };
-
-    })
+      setTimeout(function(){
+        var d = document.getElementById("dateOfBirth");
+        d.className += " has-input";
+      },100);
 
 
-    .controller('PlaylistsCtrl', function ($scope) {
-        $scope.playlists = [
-            {title: 'Reggae', id: 1},
-            {title: 'Chill', id: 2},
-            {title: 'Dubstep', id: 3},
-            {title: 'Indie', id: 4},
-            {title: 'Rap', id: 5},
-            {title: 'Cowbell', id: 6}
-        ];
-    })
+  })
 
-    .controller('PlaylistCtrl', function ($scope, $stateParams) {
-    });
+  // Home
+  .controller('HomeCtrl', function () {
+    var vm = this;
+    vm.activities = [];
+    for (var i = 0; i < 10; i++) {
+      vm.activities.push({
+        id: i,
+        shopName: 'Castro' + i,
+        price: i * 100,
+        dateAndTime: "20-03-2016 12:00"
+      });
+    }
+
+  })
+
+
+  // Settings
+  .controller('SettingsCtrl', function ($ionicModal, $scope) {
+    var vm = this;
+    vm.passCodeData = {};
+
+    createPassCodeModal();
+
+    function createPassCodeModal() {
+      // Create the pass code modal
+      $ionicModal.fromTemplateUrl('templates/passCodeSetting.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        $scope.passCodeModal = modal;
+      });
+    }
+
+
+    vm.openPassCodeModal = function () {
+      $scope.passCodeModal.show();
+    };
+
+    vm.closePassCodeModal = function () {
+      $scope.passCodeModal.hide();
+      $scope.passCodeModal.remove();
+      createPassCodeModal();
+    };
+
+  })
+
+
+  // Load Card
+  .controller('LoadCardCtrl', function () {
+    var vm = this;
+    vm.loadAmount = 0;
+    setInterval(function(){
+      document.getElementById('test').focus();
+    },100);
+
+  })
+
+
+  .controller('PlaylistsCtrl', function ($scope) {
+    $scope.playlists = [
+      {title: 'Reggae', id: 1},
+      {title: 'Chill', id: 2},
+      {title: 'Dubstep', id: 3},
+      {title: 'Indie', id: 4},
+      {title: 'Rap', id: 5},
+      {title: 'Cowbell', id: 6}
+    ];
+  });
+
+
 

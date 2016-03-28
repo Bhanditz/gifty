@@ -9746,10 +9746,24 @@ a.button {
 /**
     Registration
 **/
-.registration-input-label.input-label {
+#registration .registration-input-label.input-label {
   float: right;
   padding-right: 24px;
   direction: rtl; }
+
+#registration .agree-to-terms-and-conditions .checkbox-icon {
+  float: right; }
+
+#registration .agree-to-terms-and-conditions .item-content {
+  direction: rtl;
+  margin-right: 40px; }
+
+#registration .agree-to-terms-and-conditions i::after {
+  border-width: 2px;
+  top: 31%;
+  left: 27%;
+  width: 13px;
+  height: 7px; }
 
 /**
     Left Menu
@@ -9784,3 +9798,12 @@ a.button {
     box-shadow: inset 0 4px 0px 0px #33cd5f; }
   .activities .activities-header-card {
     direction: rtl; }
+
+/**
+    Load Card
+**/
+#loadCard .amount-hidden-input {
+  color: transparent;
+  background: transparent;
+  position: absolute;
+  left: -1000px; }

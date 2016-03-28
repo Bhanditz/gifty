@@ -41,10 +41,29 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     Registration
 **/
 
-.registration-input-label.input-label{
-  float: right;
-  padding-right: 24px;
-  direction: rtl;
+#registration{
+  .registration-input-label.input-label{
+    float: right;
+    padding-right: 24px;
+    direction: rtl;
+  }
+
+  .agree-to-terms-and-conditions{
+    .checkbox-icon{
+      float: right;
+    }
+    .item-content{
+      direction: rtl;
+      margin-right:40px;
+    }
+    i::after{
+      border-width: 2px;
+      top: 31%;
+      left: 27%;
+      width: 13px;
+      height: 7px;
+    }
+  }
 }
 
 
@@ -92,5 +111,18 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
   .activities-header-card {
     direction: rtl;
+  }
+}
+
+/**
+    Load Card
+**/
+
+#loadCard {
+  .amount-hidden-input{
+    color: transparent;
+    background: transparent;
+    position: absolute;
+    left: -1000px;
   }
 }

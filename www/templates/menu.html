@@ -18,22 +18,26 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
+
+        <!--Activities-->
         <ion-item menu-close href="#/app/activities">
           <i class="ion-arrow-swap"></i>
           {{:: app.dictionary.activities}}
         </ion-item>
-        <ion-item menu-close href="#/app/search">
+
+        <!--Load Card-->
+        <ion-item menu-close href="#/app/loadCard">
           <i class="ion-card"></i>
           {{:: app.dictionary.loadCard}}
         </ion-item>
 
-        <!---->
+        <!--Send Card-->
         <ion-item menu-close href="#/app/browse">
           <i id="left-menu-send-card" class="ion-card"></i>
           {{:: app.dictionary.sendCard}}
         </ion-item>
 
-        <!---->
+        <!--Billing Information-->
         <ion-item menu-close href="#/app/playlists">
           <i class="ion-cash"></i>
           {{:: app.dictionary.billingInformation}}

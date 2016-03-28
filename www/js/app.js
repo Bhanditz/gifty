@@ -100,12 +100,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
                 }
             })
 
-            .state('app.single', {
-                url: '/playlists/:playlistId',
+            .state('app.loadCard', {
+                url: '/loadCard',
                 views: {
                     'menuContent': {
-                        templateUrl: 'templates/playlist.html',
-                        controller: 'PlaylistCtrl'
+                        templateUrl: 'templates/loadCard.html',
+                        controller: 'LoadCardCtrl as loadCardCtrl'
                     }
                 }
             })

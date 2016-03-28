@@ -25,8 +25,9 @@ angular.module('starter')
       mobile:'נייד',
       dateOfBirth:'תאריך לידה',
       agreeToTermsAndConditions:'מסכים לתקנון',
-      registration:'הירשם'
-      
+      registration:'הירשם',
+      enterLoadAmount:'הקש סכום לטעינה'
+
     },
     localStorageKeys:{
       userPassCode:"userPassCode",
