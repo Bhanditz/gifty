@@ -88,17 +88,23 @@ angular.module('starter.controllers', [])
 
   })
 
-    // Registration
-    .controller('RegistrationCtrl', function ($state) {
-        var vm = this;
-        vm.onRegistrationClick = function () {
-          $state.go('app.home');
-        };
+  // Registration
+  .controller('RegistrationCtrl', function ($state) {
+    var vm = this;
+    vm.hideTextDate = false;
+    vm.onRegistrationClick = function () {
+      $state.go('app.home');
+    };
 
-      setTimeout(function(){
-        var d = document.getElementById("dateOfBirth");
-        d.className += " has-input";
-      },100);
+    vm.onDateFocus = function(){
+      vm.hideTextDate = true;
+      document.getElementById('date').focus();
+    };
+
+    // setTimeout(function () {
+    //   var d = document.getElementById("dateOfBirth");
+    //   d.className += " has-input";
+    // }, 100);
 
 
   })
@@ -154,9 +160,9 @@ angular.module('starter.controllers', [])
   .controller('LoadCardCtrl', function () {
     var vm = this;
     vm.loadAmount = 0;
-    setInterval(function(){
-      document.getElementById('test').focus();
-    },100);
+    setInterval(function () {
+      document.getElementById('amountHiddenInput').focus();
+    }, 100);
 
   })
 

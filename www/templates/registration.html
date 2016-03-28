@@ -25,7 +25,8 @@
             <!--Date of Birth-->
             <label class="item item-input item-floating-label">
                 <span class="registration-input-label input-label">{{:: app.dictionary.dateOfBirth}}</span>
-                <input class="text-direction" type="date" placeholder="{{:: app.dictionary.dateOfBirth}}">
+                <input ng-hide="registrationCtrl.hideTextDate" ng-focus="registrationCtrl.onDateFocus()" class="text-direction" type="text" placeholder="{{:: app.dictionary.dateOfBirth}}">
+                <input id="date" ng-show="registrationCtrl.hideTextDate" class="text-direction" type="date" placeholder="{{:: app.dictionary.dateOfBirth}}">
             </label>
 
         </ion-list>
