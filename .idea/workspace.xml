@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="039f8605-843f-4849-b816-88d48830b3b4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/scss/ionic.app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
     </list>
     <ignored path="gifty.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loadCard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loadCard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/loadCard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="536">
@@ -91,13 +93,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ionic.app.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ionic.app.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="154" column="21" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="21" />
+            <state relative-caret-position="184">
+              <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
               <folding>
-                <element signature="e#2334#2362#0" expanded="false" />
+                <element signature="e#857#875#0" expanded="false" />
+                <element signature="e#890#909#0" expanded="false" />
+                <element signature="e#927#948#0" expanded="false" />
+                <element signature="e#990#1380#0" expanded="false" />
+                <element signature="e#1032#1100#0" expanded="false" />
+                <element signature="e#1135#1378#0" expanded="false" />
+                <element signature="e#1156#1183#0" expanded="false" />
+                <element signature="e#1202#1257#0" expanded="false" />
+                <element signature="e#1271#1374#0" expanded="false" />
+                <element signature="e#1434#1465#0" expanded="false" />
+                <element signature="e#1519#1648#0" expanded="false" />
+                <element signature="e#1683#1746#0" expanded="false" />
+                <element signature="e#1784#1936#0" expanded="false" />
+                <element signature="e#1831#1881#0" expanded="false" />
+                <element signature="e#1909#1934#0" expanded="false" />
+                <element signature="e#1996#2097#0" expanded="false" />
+                <element signature="e#2121#2242#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -141,9 +159,9 @@
         <option value="$PROJECT_DIR$/www/templates/registration.html" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/js/const.js" />
-        <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
         <option value="$PROJECT_DIR$/www/templates/loadCard.html" />
+        <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
       </list>
     </option>
   </component>
@@ -181,9 +199,10 @@
     </gulpfiles>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="674" />
-    <option name="width" value="1253" />
-    <option name="height" value="1045" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -323,7 +342,7 @@
       <workItem from="1459091427616" duration="379000" />
       <workItem from="1459141757298" duration="4255000" />
       <workItem from="1459228995286" duration="1266000" />
-      <workItem from="1459268365378" duration="3817000" />
+      <workItem from="1459268365378" duration="4124000" />
     </task>
     <task id="LOCAL-00001" summary="update Activity">
       <created>1458980231197</created>
@@ -409,15 +428,22 @@
       <option name="project" value="LOCAL" />
       <updated>1459272076573</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update Activity">
+      <created>1459272376050</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1459272376050</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42812000" />
+    <option name="totallyTimeSpent" value="43119000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="674" y="0" width="1253" height="1045" extended-state="0" />
-    <editor active="false" />
+    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4419753" sideWeight="0.305949" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4419753" sideWeight="0.69448376" order="0" side_tool="false" content_ui="combo" />
@@ -427,7 +453,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3363431" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2020316" sideWeight="0.49789253" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20645906" sideWeight="0.49789253" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -894,21 +920,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="154" column="21" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="21" />
-          <folding>
-            <element signature="e#2334#2362#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/loadCard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
           <caret line="37" column="94" selection-start-line="37" selection-start-column="94" selection-end-line="37" selection-end-column="94" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+          <folding>
+            <element signature="e#857#875#0" expanded="false" />
+            <element signature="e#890#909#0" expanded="false" />
+            <element signature="e#927#948#0" expanded="false" />
+            <element signature="e#990#1380#0" expanded="false" />
+            <element signature="e#1032#1100#0" expanded="false" />
+            <element signature="e#1135#1378#0" expanded="false" />
+            <element signature="e#1156#1183#0" expanded="false" />
+            <element signature="e#1202#1257#0" expanded="false" />
+            <element signature="e#1271#1374#0" expanded="false" />
+            <element signature="e#1434#1465#0" expanded="false" />
+            <element signature="e#1519#1648#0" expanded="false" />
+            <element signature="e#1683#1746#0" expanded="false" />
+            <element signature="e#1784#1936#0" expanded="false" />
+            <element signature="e#1831#1881#0" expanded="false" />
+            <element signature="e#1909#1934#0" expanded="false" />
+            <element signature="e#1996#2097#0" expanded="false" />
+            <element signature="e#2121#2242#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9817,14 +9817,14 @@ a.button {
   right: 0; }
 
 #loadCard .key-container {
-  width: 360px;
+  width: 100vw;
   height: 200px;
   background: black; }
   #loadCard .key-container .key-row {
     display: flex; }
   #loadCard .key-container .key-cell {
     font-size: 38px;
-    width: 160px;
+    width: 100%;
     height: 50px;
     background: white;
     display: flex;
