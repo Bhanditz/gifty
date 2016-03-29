@@ -123,16 +123,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     left: -1000px;
   }
   .load-card-keyboard {
-  display: flex;
+    display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 11px;
+    bottom: 0px;
     left: 0;
     right: 0;
   }
   .key-container {
     width: 360px;
-    height: 190px;
+    height: 200px;
     background: black;
     .key-row {
       display: flex;

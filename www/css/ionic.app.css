@@ -9812,13 +9812,13 @@ a.button {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 11px;
+  bottom: 0px;
   left: 0;
   right: 0; }
 
 #loadCard .key-container {
   width: 360px;
-  height: 190px;
+  height: 200px;
   background: black; }
   #loadCard .key-container .key-row {
     display: flex; }
