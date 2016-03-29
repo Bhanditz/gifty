@@ -175,7 +175,6 @@ angular.module('starter.controllers', [])
         else {
           vm.loadAmount.push(key);
         }
-
       }
     };
   })
