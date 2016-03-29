@@ -152,6 +152,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
         background: #EFEFEF;
       }
     }
+    .disable-key-cell{
+      color: #efefef;
+      &:active {
+        background: white;
+      }
+    }
   }
 }
 

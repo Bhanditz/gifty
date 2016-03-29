@@ -162,7 +162,7 @@ angular.module('starter.controllers', [])
       else if (vm.loadAmount.length === 1 && vm.loadAmount[0] !== 0 && key === -1) {
         vm.loadAmount[0] = 0;
       }
-      else if (vm.loadAmount[0] === 0) {
+      else if (vm.loadAmount[0] === 0 && key !== -2) {
         vm.loadAmount[0] = key;
       }
       else {

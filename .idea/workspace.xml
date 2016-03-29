@@ -6,6 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/scss/ionic.app.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
     </list>
     <ignored path="gifty.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+            <state relative-caret-position="261">
+              <caret line="164" column="50" selection-start-line="164" selection-start-column="50" selection-end-line="164" selection-end-column="50" />
               <folding>
                 <element signature="e#193#2167#0" expanded="false" />
                 <element signature="e#200#266#0" expanded="false" />
@@ -66,8 +67,8 @@
                 <element signature="e#3450#3515#0" expanded="false" />
                 <element signature="e#3539#3586#0" expanded="false" />
                 <element signature="e#3636#3678#0" expanded="false" />
-                <element signature="e#4551#4776#0" expanded="false" />
-                <element signature="e#4576#4771#0" expanded="false" />
+                <element signature="e#4565#4790#0" expanded="false" />
+                <element signature="e#4590#4785#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -93,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ionic.app.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ionic.app.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+            <state relative-caret-position="303">
+              <caret line="154" column="21" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="21" />
               <folding>
                 <element signature="e#2334#2362#0" expanded="false" />
               </folding>
@@ -143,9 +144,9 @@
         <option value="$PROJECT_DIR$/www/templates/registration.html" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/js/const.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers.js" />
-        <option value="$PROJECT_DIR$/www/templates/loadCard.html" />
         <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/www/templates/loadCard.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -325,7 +326,7 @@
       <workItem from="1459091427616" duration="379000" />
       <workItem from="1459141757298" duration="4255000" />
       <workItem from="1459228995286" duration="1266000" />
-      <workItem from="1459268365378" duration="3239000" />
+      <workItem from="1459268365378" duration="3518000" />
     </task>
     <task id="LOCAL-00001" summary="update Activity">
       <created>1458980231197</created>
@@ -397,11 +398,18 @@
       <option name="project" value="LOCAL" />
       <updated>1459271533316</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update Activity">
+      <created>1459271796252</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1459271796252</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42234000" />
+    <option name="totallyTimeSpent" value="42513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="674" y="0" width="1253" height="1045" extended-state="0" />
@@ -527,8 +535,8 @@
             <element signature="e#3450#3515#0" expanded="false" />
             <element signature="e#3539#3586#0" expanded="false" />
             <element signature="e#3636#3678#0" expanded="false" />
-            <element signature="e#4551#4776#0" expanded="false" />
-            <element signature="e#4576#4771#0" expanded="false" />
+            <element signature="e#4565#4790#0" expanded="false" />
+            <element signature="e#4590#4785#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,8 +577,8 @@
             <element signature="e#3450#3515#0" expanded="false" />
             <element signature="e#3539#3586#0" expanded="false" />
             <element signature="e#3636#3678#0" expanded="false" />
-            <element signature="e#4551#4776#0" expanded="false" />
-            <element signature="e#4576#4771#0" expanded="false" />
+            <element signature="e#4565#4790#0" expanded="false" />
+            <element signature="e#4590#4785#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -847,10 +855,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="154" column="21" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="21" />
+          <folding>
+            <element signature="e#2334#2362#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/loadCard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+        <state relative-caret-position="261">
+          <caret line="164" column="50" selection-start-line="164" selection-start-column="50" selection-end-line="164" selection-end-column="50" />
           <folding>
             <element signature="e#193#2167#0" expanded="false" />
             <element signature="e#200#266#0" expanded="false" />
@@ -876,26 +902,8 @@
             <element signature="e#3450#3515#0" expanded="false" />
             <element signature="e#3539#3586#0" expanded="false" />
             <element signature="e#3636#3678#0" expanded="false" />
-            <element signature="e#4551#4776#0" expanded="false" />
-            <element signature="e#4576#4771#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/loadCard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <element signature="e#2334#2362#0" expanded="false" />
+            <element signature="e#4565#4790#0" expanded="false" />
+            <element signature="e#4590#4785#0" expanded="false" />
           </folding>
         </state>
       </provider>

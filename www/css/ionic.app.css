@@ -9835,3 +9835,7 @@ a.button {
     align-items: center; }
     #loadCard .key-container .key-cell:active {
       background: #EFEFEF; }
+  #loadCard .key-container .disable-key-cell {
+    color: #efefef; }
+    #loadCard .key-container .disable-key-cell:active {
+      background: white; }
