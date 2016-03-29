@@ -15,7 +15,8 @@ angular.module('starter.controllers', [])
     vm.localStorageKeys = appConst.localStorageKeys;
     var loginState = $localStorage.get(vm.localStorageKeys.loginState);
     if (!loginState) {
-      $state.go('app.registration');
+      // $state.go('app.registration');
+      $state.go('app.loadCard');
     }
 
 
@@ -96,16 +97,10 @@ angular.module('starter.controllers', [])
       $state.go('app.home');
     };
 
-    vm.onDateFocus = function(){
+    vm.onDateFocus = function () {
       vm.hideTextDate = true;
       document.getElementById('date').focus();
     };
-
-    // setTimeout(function () {
-    //   var d = document.getElementById("dateOfBirth");
-    //   d.className += " has-input";
-    // }, 100);
-
 
   })
 
@@ -159,11 +154,30 @@ angular.module('starter.controllers', [])
   // Load Card
   .controller('LoadCardCtrl', function () {
     var vm = this;
-    vm.loadAmount = 0;
-    setInterval(function () {
-      document.getElementById('amountHiddenInput').focus();
-    }, 100);
+    vm.loadAmount = [0];
+    vm.onCellClick = function (key) {
+      if (vm.loadAmount[0] === 0 && key === -1) {
+        return;
+      }
+      else if (vm.loadAmount.length === 1 && vm.loadAmount[0] !== 0 && key === -1) {
+        vm.loadAmount[0] = 0;
+      }
+      else if (vm.loadAmount[0] === 0) {
+        vm.loadAmount[0] = key;
+      }
+      else {
+        if (key === -1) { // On delete click
+          vm.loadAmount.pop();
+        }
+        else if (key === -2) { // On approve click
 
+        }
+        else {
+          vm.loadAmount.push(key);
+        }
+
+      }
+    };
   })
 
 

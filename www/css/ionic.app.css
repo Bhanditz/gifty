@@ -9807,3 +9807,31 @@ a.button {
   background: transparent;
   position: absolute;
   left: -1000px; }
+
+#loadCard .load-card-keyboard {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  right: 0; }
+
+#loadCard .key-container {
+  width: 360px;
+  height: 190px;
+  background: black; }
+  #loadCard .key-container .key-row {
+    display: flex; }
+  #loadCard .key-container .key-cell {
+    font-size: 38px;
+    width: 160px;
+    height: 50px;
+    background: white;
+    display: flex;
+    border: 1px solid #EFEFEF;
+    color: #5592DA;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #loadCard .key-container .key-cell:active {
+      background: #EFEFEF; }

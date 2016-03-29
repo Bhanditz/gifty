@@ -36,27 +36,26 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   direction: rtl;
 }
 
-
 /**
     Registration
 **/
 
-#registration{
-  .registration-input-label.input-label{
+#registration {
+  .registration-input-label.input-label {
     float: right;
     padding-right: 24px;
     direction: rtl;
   }
 
-  .agree-to-terms-and-conditions{
-    .checkbox-icon{
+  .agree-to-terms-and-conditions {
+    .checkbox-icon {
       float: right;
     }
-    .item-content{
+    .item-content {
       direction: rtl;
-      margin-right:40px;
+      margin-right: 40px;
     }
-    i::after{
+    i::after {
       border-width: 2px;
       top: 31%;
       left: 27%;
@@ -65,7 +64,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     }
   }
 }
-
 
 /**
     Left Menu
@@ -88,7 +86,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   justify-content: center;
   align-items: center;
 }
-
 
 /**
     Pass Code
@@ -119,10 +116,42 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 **/
 
 #loadCard {
-  .amount-hidden-input{
+  .amount-hidden-input {
     color: transparent;
     background: transparent;
     position: absolute;
     left: -1000px;
   }
+  .load-card-keyboard {
+  display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    right: 0;
+  }
+  .key-container {
+    width: 360px;
+    height: 190px;
+    background: black;
+    .key-row {
+      display: flex;
+    }
+    .key-cell {
+      font-size: 38px;
+      width: 160px;
+      height: 50px;
+      background: white;
+      display: flex;
+      border: 1px solid #EFEFEF;
+      color: #5592DA;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:active {
+        background: #EFEFEF;
+      }
+    }
+  }
 }
+

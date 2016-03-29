@@ -26,7 +26,8 @@ angular.module('starter')
       dateOfBirth:'תאריך לידה',
       agreeToTermsAndConditions:'מסכים לתקנון',
       registration:'הירשם',
-      enterLoadAmount:'הקש סכום לטעינה'
+      enterLoadAmount:'הקש סכום לטעינה',
+      approve:'אשר'
 
     },
     localStorageKeys:{
