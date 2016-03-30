@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         controller: 'AppCtrl as app'
       })
 
-      //    User Registration
+      // User Registration
       .state('app.registration', {
         url: '/registration',
         views: {
@@ -70,6 +70,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         }
       })
 
+      // Activities
       .state('app.activities', {
         url: '/activities',
         views: {
@@ -80,6 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         }
       })
 
+      // Activity
       .state('app.activity', {
         url: '/activities/:activityId',
         views: {
@@ -90,6 +92,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         }
       })
 
+      // Send Card
       .state('app.sendCard', {
         url: '/sendCard',
         views: {
@@ -100,6 +103,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         }
       })
 
+      // Load Card
       .state('app.loadCard', {
         url: '/loadCard',
         views: {
