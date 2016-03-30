@@ -30,7 +30,10 @@ angular.module('starter')
       approve:'אשר',
       send:'שלח',
       amount:'סכום',
-      greeting:'ברכה'
+      greeting:'ברכה',
+      login:'התחברות',
+      enter:'כניסה',
+      forgotPassword:'שכחתי סיסמא'
 
     },
     localStorageKeys:{

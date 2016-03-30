@@ -81,6 +81,22 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   transform: rotate(45deg);
 }
 
+
+/**
+    Left Menu
+**/
+
+#logIn{
+  .login-input-label {
+    @include input-label;
+  }
+
+  .forgot-password{
+    @include input-label
+  }
+}
+
+
 /**
     Home (Card balance)
 **/
@@ -191,6 +207,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     @include brand-font-size;
 
     color:#004E8C;
+  }
+
+  .header-title{
+    text-align: center;
   }
 }
 

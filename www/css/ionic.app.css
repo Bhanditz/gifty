@@ -9775,6 +9775,19 @@ a.button {
   transform: rotate(45deg); }
 
 /**
+    Left Menu
+**/
+#logIn .login-input-label {
+  float: right;
+  padding-right: 8px;
+  direction: rtl; }
+
+#logIn .forgot-password {
+  float: right;
+  padding-right: 8px;
+  direction: rtl; }
+
+/**
     Home (Card balance)
 **/
 .home-card-balance {
@@ -9855,6 +9868,9 @@ a.button {
   font-size: 34px;
   float: right;
   color: #004E8C; }
+
+#billingInformation .header-title {
+  text-align: center; }
 
 /**
     Send Card

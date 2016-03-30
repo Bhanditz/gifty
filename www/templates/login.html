@@ -1,25 +1,44 @@
-<ion-modal-view>
+<ion-modal-view id="logIn">
+
+  <!--Header-->
   <ion-header-bar>
-    <h1 class="title">Login</h1>
+    <h1 class="title">{{:: app.dictionary.login}}</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button class="button button-clear" ng-click="closeLogin()">
+        <i class="ion-close-round"></i>
+      </button>
     </div>
   </ion-header-bar>
+
+  <!--Login-->
   <ion-content>
     <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+
+      <ion-list>
+
+        <!--Email-->
+        <label class="item item-input item-stacked-label">
+          <span  class="login-input-label input-label">{{:: app.dictionary.email}}</span>
+          <input class="text-direction" type="text" placeholder="{{:: app.dictionary.email}}">
         </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+
+        <!--Password-->
+        <label class="item item-input item-stacked-label">
+          <span class="login-input-label input-label">{{:: app.dictionary.password}}</span>
+          <input class="text-direction" type="password" placeholder="{{:: app.dictionary.password}}">
         </label>
+
+        <!--Login button-->
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-positive" type="submit">{{:: app.dictionary.enter}}</button>
         </label>
-      </div>
+
+        <!--Forgot Password-->
+        <button class="button button-clear button-calm forgot-password">
+          {{:: app.dictionary.forgotPassword}}
+        </button>
+      </ion-list>
+
     </form>
   </ion-content>
 </ion-modal-view>
