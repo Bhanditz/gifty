@@ -1,0 +1,47 @@
+<ion-view id="loadCard" view-title="{{:: app.dictionary.loadCard}}">
+  <div class="home-card-balance">
+    <h1>{{:: app.dictionary.enterLoadAmount}}</h1>
+
+    <h1>
+      <span>{{app.dictionary.nis}}</span>
+      <span class="float-right">&nbsp{{ loadCardCtrl.loadAmount.join('')}}</span>
+    </h1>
+  </div>
+
+  <!--Keyboard-->
+  <div class="load-card-keyboard">
+    <div class="key-container">
+
+      <!--Row 1-->
+      <div class="key-row">
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(1)">1</div>
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(2)">2</div>
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(3)">3</div>
+      </div>
+
+      <!--Row 2-->
+      <div class="key-row">
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(4)">4</div>
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(5)">5</div>
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(6)">6</div>
+      </div>
+
+      <!-- Row 3-->
+      <div class="key-row">
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(7)">7</div>
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(8)">8</div>
+        <div class="key-cell" ng-click="loadCardCtrl.onCellClick(9)">9</div>
+      </div>
+
+      <!--Row 4-->
+      <div class="key-row">
+        <div class="key-cell" ng-class="{'disable-key-cell':loadCardCtrl.loadAmount[0] === 0}" ng-click="loadCardCtrl.onCellClick(-2)">{{:: app.dictionary.approve}}</div>
+        <div class="key-cell" ng-class="{'disable-key-cell':loadCardCtrl.loadAmount[0] === 0}" ng-click="loadCardCtrl.onCellClick(0)">0</div>
+        <div class="key-cell" ng-class="{'disable-key-cell':loadCardCtrl.loadAmount[0] === 0}" ng-click="loadCardCtrl.onCellClick(-1)">
+          <i class="ion-backspace-outline"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-view>
