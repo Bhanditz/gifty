@@ -22,6 +22,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 /**
+    Common Mixin
+**/
+@mixin input-label {
+  float: right;
+  padding-right: 8px;
+  direction: rtl;
+}
+
+
+/**
     Common
 **/
 .float-left {
@@ -42,9 +52,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 #registration {
   .registration-input-label.input-label {
-    float: right;
-    padding-right: 24px;
-    direction: rtl;
+   @include input-label;
   }
 
   .agree-to-terms-and-conditions {
@@ -166,12 +174,28 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 /**
     Billing Information
 **/
+
 #billingInformation {
   .brand-font-size {
     font-size: 34px;
     float: right;
   }
 }
+
+
+/**
+    Send Card
+**/
+#sendCard{
+  .send-card-input-label.input-label {
+    @include input-label;
+  }
+
+  .send-card-textarea{
+    height: 30vh
+  }
+}
+
 
 
 /**

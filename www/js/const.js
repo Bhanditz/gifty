@@ -27,7 +27,10 @@ angular.module('starter')
       agreeToTermsAndConditions:'מסכים לתקנון',
       registration:'הירשם',
       enterLoadAmount:'הקש סכום לטעינה',
-      approve:'אשר'
+      approve:'אשר',
+      send:'שלח',
+      amount:'סכום',
+      greeting:'ברכה'
 
     },
     localStorageKeys:{

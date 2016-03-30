@@ -9732,6 +9732,9 @@ a.button {
   transition-duration: 0s; }
 
 /**
+    Common Mixin
+**/
+/**
     Common
 **/
 .float-left {
@@ -9748,7 +9751,7 @@ a.button {
 **/
 #registration .registration-input-label.input-label {
   float: right;
-  padding-right: 24px;
+  padding-right: 8px;
   direction: rtl; }
 
 #registration .agree-to-terms-and-conditions .checkbox-icon {
@@ -9846,6 +9849,17 @@ a.button {
 #billingInformation .brand-font-size {
   font-size: 34px;
   float: right; }
+
+/**
+    Send Card
+**/
+#sendCard .send-card-input-label.input-label {
+  float: right;
+  padding-right: 8px;
+  direction: rtl; }
+
+#sendCard .send-card-textarea {
+  height: 30vh; }
 
 /**
  Icon Font: brandfont

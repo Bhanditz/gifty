@@ -1,0 +1,38 @@
+<ion-view id="sendCard" view-title="{{:: app.dictionary.sendCard}}">
+  <ion-content>
+
+    <ion-list>
+
+      <!--Email-->
+      <label class="item item-input item-stacked-label">
+        <span class=" send-card-input-label input-label">{{:: app.dictionary.email}}</span>
+        <input class="text-direction" type="text" placeholder="{{:: app.dictionary.email}}">
+      </label>
+
+      <!--Mobile-->
+      <label class="item item-input item-stacked-label">
+        <span class=" send-card-input-label input-label">{{:: app.dictionary.mobile}}</span>
+        <input class="text-direction" type="number" placeholder="{{:: app.dictionary.mobile}}">
+      </label>
+
+      <!--Amount-->
+      <label class="item item-input item-stacked-label">
+        <span class=" send-card-input-label input-label">{{:: app.dictionary.amount}}</span>
+        <input class="text-direction" type="number" placeholder="{{:: app.dictionary.amount}}">
+      </label>
+
+      <!--Greeting-->
+      <label class="item item-input item-stacked-label">
+        <span class=" send-card-input-label input-label">{{:: app.dictionary.greeting}}</span>
+        <textarea class="text-direction send-card-textarea" placeholder="{{:: app.dictionary.greeting}}"></textarea>
+      </label>
+
+    </ion-list>
+
+    <!--Send Button-->
+    <button class="button button-outline button-block button-light" ng-click="loadCardCtrl.approveBillingInformation()">
+      {{:: app.dictionary.send}}
+    </button>
+  </ion-content>
+  </ion-content>
+</ion-view>

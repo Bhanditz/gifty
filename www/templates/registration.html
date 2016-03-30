@@ -4,26 +4,26 @@
         <ion-list>
 
             <!--Email-->
-            <label class="item item-input item-floating-label">
+            <label class="item item-input item-stacked-label">
                 <span  class="registration-input-label input-label">{{:: app.dictionary.email}}</span>
                 <input class="text-direction" type="text" placeholder="{{:: app.dictionary.email}}">
             </label>
 
             <!--Password-->
-            <label class="item item-input item-floating-label">
+            <label class="item item-input item-stacked-label">
                 <span class="registration-input-label input-label">{{:: app.dictionary.password}}</span>
                 <input class="text-direction" type="password" placeholder="{{:: app.dictionary.password}}">
             </label>
 
             <!--Mobile-->
-            <label class="item item-input item-floating-label">
+            <label class="item item-input item-stacked-label">
                 <span class="registration-input-label input-label">{{:: app.dictionary.mobile}}</span>
                 <input class="text-direction" type="number" placeholder="{{:: app.dictionary.mobile}}">
             </label>
 
 
             <!--Date of Birth-->
-            <label class="item item-input item-floating-label">
+            <label class="item item-input item-stacked-label">
                 <span class="registration-input-label input-label">{{:: app.dictionary.dateOfBirth}}</span>
                 <input ng-hide="registrationCtrl.hideTextDate" ng-focus="registrationCtrl.onDateFocus()" class="text-direction" type="text" placeholder="{{:: app.dictionary.dateOfBirth}}">
                 <input id="date" ng-show="registrationCtrl.hideTextDate" class="text-direction" type="date" placeholder="{{:: app.dictionary.dateOfBirth}}">

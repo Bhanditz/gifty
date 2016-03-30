@@ -90,12 +90,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         }
       })
 
-      .state('app.playlists', {
-        url: '/playlists',
+      .state('app.sendCard', {
+        url: '/sendCard',
         views: {
           'menuContent': {
-            templateUrl: 'templates/playlists.html',
-            controller: 'PlaylistsCtrl'
+            templateUrl: 'templates/sendCard.html',
+            controller: 'SendCardCtrl as sendCardCtrl'
           }
         }
       })
