@@ -1,0 +1,31 @@
+<ion-modal-view id="billingInformation">
+
+  <!--Header-->
+  <ion-header-bar>
+    <h1 class="title">{{:: app.dictionary.billingInformation}}</h1>
+    <button class="button button-clear" ng-click="loadCardCtrl.closeBillingInformationModal()">
+      <i class="ion-close-round"></i>
+    </button>
+  </ion-header-bar>
+
+
+  <!--Pass Code Modal Setting-->
+  <ion-content>
+    <ion-list>
+
+      <!--PayPal Option-->
+      <ion-radio ng-model="choice" ng-value="'PayPal'">
+        <i class="brand-font-size bf-cc-paypal"></i>
+      </ion-radio>
+
+      <!--Visa Option-->
+      <ion-radio ng-model="choice" ng-value="'Visa'">
+        <i class="brand-font-size bf-cc-visa"></i>
+      </ion-radio>
+
+
+
+    </ion-list>
+  </ion-content>
+
+</ion-modal-view>

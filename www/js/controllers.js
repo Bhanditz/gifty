@@ -137,7 +137,6 @@ angular.module('starter.controllers', [])
       });
     }
 
-
     vm.openPassCodeModal = function () {
       $scope.passCodeModal.show();
     };
@@ -152,9 +151,31 @@ angular.module('starter.controllers', [])
 
 
   // Load Card
-  .controller('LoadCardCtrl', function () {
+  .controller('LoadCardCtrl', function ($ionicModal, $scope) {
     var vm = this;
     vm.loadAmount = [0];
+
+    createBillingInformationModal();
+
+    function createBillingInformationModal() {
+      $ionicModal.fromTemplateUrl('templates/billingInformation.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        $scope.billingInformationModal = modal;
+      });
+    }
+
+    vm.openBillingInformationModal = function () {
+      $scope.billingInformationModal.show();
+    };
+
+    vm.closeBillingInformationModal = function () {
+      $scope.billingInformationModal.hide();
+      $scope.billingInformationModal.remove();
+      createBillingInformationModal();
+    };
+
     vm.onCellClick = function (key) {
       if (vm.loadAmount[0] === 0 && key === -1) {
         return;
@@ -170,7 +191,7 @@ angular.module('starter.controllers', [])
           vm.loadAmount.pop();
         }
         else if (key === -2) { // On approve click
-
+          vm.openBillingInformationModal();
         }
         else {
           vm.loadAmount.push(key);

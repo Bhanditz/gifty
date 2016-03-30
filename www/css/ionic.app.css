@@ -9840,6 +9840,16 @@ a.button {
     #loadCard .key-container .disable-key-cell:active {
       background: white; }
 
+/**
+    Billing Information
+**/
+#billingInformation .brand-font-size {
+  font-size: 34px;
+  float: right; }
+
+/**
+ Icon Font: brandfont
+**/
 @font-face {
   font-family: "brandfont";
   src: url("../fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.eot");
