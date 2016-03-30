@@ -22,7 +22,7 @@ angular.module('starter.controllers', [])
 
     $scope.logout = function () {
       $ionicLoading.show({template: 'Logging out....'});
-      $localStorage.set(vm.dictionary.localStorageKeys.loginState, false);
+      $localStorage.set(vm.localStorageKeys.loginState, false);
       $localStorage.removeAll(appConst.localStorageKeys);
 
       $timeout(function () {
