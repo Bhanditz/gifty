@@ -174,11 +174,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 /**
     Billing Information
 **/
+@mixin brand-font-size{
+  font-size: 34px;
+  float: right;
+}
 
 #billingInformation {
-  .brand-font-size {
-    font-size: 34px;
-    float: right;
+
+  .pay-pal{
+    @include brand-font-size;
+
+    color:#0A87C1;
+  }
+
+  .visa{
+    @include brand-font-size;
+
+    color:#004E8C;
   }
 }
 

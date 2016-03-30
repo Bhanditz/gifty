@@ -87,7 +87,7 @@ angular.module('starter.controllers', [])
     var vm = this;
 
   })
-    
+
 
   // Registration
   .controller('RegistrationCtrl', function ($state) {
@@ -103,7 +103,7 @@ angular.module('starter.controllers', [])
     };
 
   })
-    
+
 
   // Home
   .controller('HomeCtrl', function () {
@@ -154,12 +154,13 @@ angular.module('starter.controllers', [])
   // Load Card
   .controller('LoadCardCtrl', function ($ionicModal, $scope) {
     var vm = this;
+    vm.paymentChoice = 'PayPal';
     vm.loadAmount = [0];
 
     createBillingInformationModal();
 
     function createBillingInformationModal() {
-      $ionicModal.fromTemplateUrl('templates/billingInformation.html', {
+      $ionicModal.fromTemplateUrl('templates/billingInformationModal.html', {
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function (modal) {
@@ -180,7 +181,6 @@ angular.module('starter.controllers', [])
     vm.approveBillingInformation = function () {
       vm.closeBillingInformationModal();
     };
-
 
     vm.onCellClick = function (key) {
       if (vm.loadAmount[0] === 0 && key === -1) {
@@ -207,8 +207,14 @@ angular.module('starter.controllers', [])
   })
 
 
+  .controller('BillingInformationCtrl', function () {
+    var vm = this;
+    vm.paymentChoice = 'PayPal';
+  })
+
+
   .controller('SendCardCtrl', function () {
-   
+
   });
 
 

@@ -114,6 +114,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         }
       })
 
+      // Load Card
+      .state('app.billingInformation', {
+        url: '/billingInformation',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/billingInformation.html',
+            controller: 'BillingInformationCtrl as billingInformationCtrl'
+          }
+        }
+      })
+
       // Settings
       .state('app.settings', {
         url: '/settings',

@@ -9846,9 +9846,15 @@ a.button {
 /**
     Billing Information
 **/
-#billingInformation .brand-font-size {
+#billingInformation .pay-pal {
   font-size: 34px;
-  float: right; }
+  float: right;
+  color: #0A87C1; }
+
+#billingInformation .visa {
+  font-size: 34px;
+  float: right;
+  color: #004E8C; }
 
 /**
     Send Card
