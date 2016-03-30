@@ -9790,6 +9790,10 @@ a.button {
 /**
     Home (Card balance)
 **/
+.home-logo {
+  width: 41px;
+  height: 42px; }
+
 .home-card-balance {
   width: 100vw;
   height: 50vh;

@@ -6,7 +6,7 @@
             <!--Email-->
             <label class="item item-input item-stacked-label">
                 <span  class="registration-input-label input-label">{{:: app.dictionary.email}}</span>
-                <input class="text-direction" type="text" placeholder="{{:: app.dictionary.email}}">
+                <input class="text-direction" type="email" placeholder="{{:: app.dictionary.email}}">
             </label>
 
             <!--Password-->
@@ -35,7 +35,7 @@
         <ion-checkbox class="agree-to-terms-and-conditions" ng-model="filter.blue">{{:: app.dictionary.agreeToTermsAndConditions}}</ion-checkbox>
 
         <!--Registration-->
-        <button class="button button-outline button-block button-light" ng-click="registrationCtrl.onRegistrationClick()">
+        <button class="button button-outline button-block button-dark" ng-click="registrationCtrl.onRegistrationClick()">
             {{:: app.dictionary.registration}}
         </button>
 

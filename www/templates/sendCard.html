@@ -3,12 +3,6 @@
 
     <ion-list>
 
-      <!--Email-->
-      <label class="item item-input item-stacked-label">
-        <span class=" send-card-input-label input-label">{{:: app.dictionary.email}}</span>
-        <input class="text-direction" type="text" placeholder="{{:: app.dictionary.email}}">
-      </label>
-
       <!--Mobile-->
       <label class="item item-input item-stacked-label">
         <span class=" send-card-input-label input-label">{{:: app.dictionary.mobile}}</span>
@@ -30,7 +24,7 @@
     </ion-list>
 
     <!--Send Button-->
-    <button class="button button-outline button-block button-light" ng-click="loadCardCtrl.approveBillingInformation()">
+    <button class="button button-outline button-block button-dark" ng-click="loadCardCtrl.approveBillingInformation()">
       {{:: app.dictionary.send}}
     </button>
   </ion-content>
