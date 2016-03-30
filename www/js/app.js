@@ -37,7 +37,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
     });
   })
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+
+    $ionicConfigProvider.navBar.alignTitle('center');
+    
     $stateProvider
 
     // Root app
