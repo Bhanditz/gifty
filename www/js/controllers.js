@@ -15,8 +15,7 @@ angular.module('starter.controllers', [])
     vm.localStorageKeys = appConst.localStorageKeys;
     var loginState = $localStorage.get(vm.localStorageKeys.loginState);
     if (!loginState) {
-      // $state.go('app.registration');
-      $state.go('app.loadCard');
+       $state.go('app.registration');
     }
 
 
@@ -175,6 +174,11 @@ angular.module('starter.controllers', [])
       $scope.billingInformationModal.remove();
       createBillingInformationModal();
     };
+
+    vm.approveBillingInformation = function () {
+      vm.closeBillingInformationModal();
+    };
+
 
     vm.onCellClick = function (key) {
       if (vm.loadAmount[0] === 0 && key === -1) {

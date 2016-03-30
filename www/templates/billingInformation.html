@@ -23,9 +23,12 @@
         <i class="brand-font-size bf-cc-visa"></i>
       </ion-radio>
 
-
-
     </ion-list>
+
+    <!--Approve Button-->
+    <button class="button button-outline button-block button-light" ng-click="loadCardCtrl.approveBillingInformation()">
+      {{:: app.dictionary.approve}}
+    </button>
   </ion-content>
 
 </ion-modal-view>
