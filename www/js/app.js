@@ -37,10 +37,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
     });
   })
 
-  .config(function ($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
     $ionicConfigProvider.navBar.alignTitle('center');
-    
+
     $stateProvider
 
     // Root app
@@ -49,6 +49,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-lock-screen'])
         abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl as app'
+      })
+
+      // Login
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl as loginCtrl'
+          }
+        }
       })
 
       // User Registration

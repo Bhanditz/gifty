@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
     vm.localStorageKeys = appConst.localStorageKeys;
     var loginState = $localStorage.get(vm.localStorageKeys.loginState);
     if (!loginState) {
-       $state.go('app.registration');
+      $state.go('app.login');
     }
 
 
@@ -67,23 +67,9 @@ angular.module('starter.controllers', [])
     };
   })
 
-  // Activities
-  .controller('ActivitiesCtrl', function () {
-    var vm = this;
 
-    vm.activities = [];
-    for (var i = 0; i < 10; i++) {
-      vm.activities.push({
-        id: i,
-        shopName: 'Castro' + i,
-        price: i * 100,
-        dateAndTime: "20-03-2016 12:00"
-      });
-    }
-
-  })
-
-  .controller('ActivityCtrl', function () {
+  // Login
+  .controller('LoginCtrl', function () {
     var vm = this;
 
   })
@@ -117,6 +103,28 @@ angular.module('starter.controllers', [])
         dateAndTime: "20-03-2016 12:00"
       });
     }
+
+  })
+
+
+  // Activities
+  .controller('ActivitiesCtrl', function () {
+    var vm = this;
+
+    vm.activities = [];
+    for (var i = 0; i < 10; i++) {
+      vm.activities.push({
+        id: i,
+        shopName: 'Castro' + i,
+        price: i * 100,
+        dateAndTime: "20-03-2016 12:00"
+      });
+    }
+
+  })
+
+  .controller('ActivityCtrl', function () {
+    var vm = this;
 
   })
 
