@@ -9775,17 +9775,27 @@ a.button {
   transform: rotate(45deg); }
 
 /**
-    Left Menu
+    Login
 **/
-#logIn .login-input-label {
+#login .login-input-label {
   float: right;
   padding-right: 8px;
   direction: rtl; }
 
-#logIn .forgot-password {
+#login .forgot-password {
   float: right;
   padding-right: 8px;
   direction: rtl; }
+
+#login .login-separator {
+  width: 1px;
+  height: 20px;
+  border-right: 1px solid #e5e5e5; }
+
+#login .login-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /**
     Home (Card balance)

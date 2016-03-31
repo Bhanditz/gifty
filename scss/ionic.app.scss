@@ -81,16 +81,28 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 /**
-    Left Menu
+    Login
 **/
 
-#logIn {
+#login {
   .login-input-label {
     @include input-label;
   }
 
   .forgot-password {
     @include input-label
+  }
+
+  .login-separator {
+    width: 1px;
+    height: 20px;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .login-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

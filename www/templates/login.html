@@ -1,4 +1,4 @@
-<ion-view id="logIn" view-title="{{:: app.dictionary.login}}">
+<ion-view id="login" view-title="{{:: app.dictionary.login}}">
   <ion-content>
 
     <ion-list>
@@ -20,10 +20,22 @@
         <button class="button button-outline button-block button-dark" type="submit">{{:: app.dictionary.enter}}</button>
       </label>
 
-      <!--Forgot Password-->
-      <button class="button button-clear button-calm forgot-password">
-        {{:: app.dictionary.forgotPassword}}
-      </button>
+      <div class="login-center">
+
+        <!--Forgot Password-->
+        <a class="button button-clear button-positive forgot-password">
+          {{:: app.dictionary.forgotPassword}}
+        </a>
+
+        <div class="login-separator"></div>
+
+        <!--Forgot Registration-->
+        <a class="button button-clear button-positive forgot-password" href="#/app/registration">
+          {{:: app.dictionary.registration}}
+        </a>
+
+      </div>
+
     </ion-list>
 
 
