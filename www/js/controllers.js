@@ -69,8 +69,12 @@ angular.module('starter.controllers', [])
 
 
   // Login
-  .controller('LoginCtrl', function () {
+  .controller('LoginCtrl', function ($state) {
     var vm = this;
+
+    vm.onLogInClick = function () {
+      $state.go('app.home');
+    };
 
   })
 
@@ -215,14 +219,22 @@ angular.module('starter.controllers', [])
   })
 
 
+  // Billing Information
   .controller('BillingInformationCtrl', function () {
     var vm = this;
     vm.paymentChoice = 'PayPal';
+
+    vm.approveBillingInformation = function(){
+
+    };
   })
 
 
-  .controller('SendCardCtrl', function () {
-
+  .controller('SendCardCtrl', function ($state) {
+    var vm= this;
+    vm.onSendClick = function(){
+      $state.go('app.billingInformation');
+    };
   });
 
 

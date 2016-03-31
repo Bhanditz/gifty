@@ -1,28 +1,29 @@
 <ion-view id="billingInformation" view-title="{{:: app.dictionary.billingInformation}}">
 
-  <!--Pass Code Modal Setting-->
   <ion-content>
 
     <!-- Payment Choice-->
     <ion-list>
 
       <!--PayPal Option-->
-      <ion-radio ng-model="loadCardCtrl.paymentChoice" ng-value="'PayPal'">
+      <ion-radio ng-model="billingInformationCtrl.paymentChoice" ng-value="'PayPal'">
         <i class="pay-pal bf-cc-paypal"></i>
       </ion-radio>
 
       <!--Visa Option-->
-      <ion-radio ng-model="loadCardCtrl.paymentChoice" ng-value="'Visa'">
+      <ion-radio ng-model="billingInformationCtrl.paymentChoice" ng-value="'Visa'">
         <i class="visa bf-cc-visa"></i>
       </ion-radio>
 
     </ion-list>
 
     <!--Approve Button-->
-    <button class="button button-outline button-block button-dark" ng-click="loadCardCtrl.approveBillingInformation()">
-      {{:: app.dictionary.approve}}
-    </button>
-
+    <div class="padding">
+      <button class="button button-outline button-block button-dark"
+              ng-click="billingInformationCtrl.approveBillingInformation()">
+        {{:: app.dictionary.approve}}
+      </button>
+    </div>
   </ion-content>
 
 </ion-view>

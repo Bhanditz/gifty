@@ -9746,6 +9746,12 @@ a.button {
 .text-direction {
   direction: rtl; }
 
+.input-icon {
+  padding-right: 10px; }
+
+.right-input-padding {
+  padding-right: 10px !important; }
+
 /**
     Registration
 **/

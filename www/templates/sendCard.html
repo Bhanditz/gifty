@@ -24,9 +24,13 @@
     </ion-list>
 
     <!--Send Button-->
-    <button class="button button-outline button-block button-dark" ng-click="loadCardCtrl.approveBillingInformation()">
-      {{:: app.dictionary.send}}
-    </button>
+    <div class="padding">
+      <button class="button button-outline button-block button-dark"
+              ng-click="sendCardCtrl.onSendClick()">
+        {{:: app.dictionary.send}}
+      </button>
+    </div>
+
   </ion-content>
   </ion-content>
 </ion-view>
