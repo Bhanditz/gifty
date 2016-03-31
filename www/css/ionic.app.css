@@ -9864,7 +9864,7 @@ a.button {
     height: 50px;
     background: white;
     display: flex;
-    border: 1px solid #EFEFEF;
+    /*border: 1px solid #EFEFEF;*/
     color: #5592DA;
     display: flex;
     justify-content: center;

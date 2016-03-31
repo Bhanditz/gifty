@@ -19,6 +19,12 @@
     <ion-content>
       <ion-list>
 
+        <!--Home-->
+        <ion-item menu-close href="#/app/home">
+          <i class="ion-home"></i>
+          {{:: app.dictionary.home}}
+        </ion-item>
+
         <!--Activities-->
         <ion-item menu-close href="#/app/activities">
           <i class="ion-arrow-swap"></i>
@@ -35,18 +41,6 @@
         <ion-item menu-close href="#/app/sendCard">
           <i id="left-menu-send-card" class="fa fa-gift"></i>
           {{:: app.dictionary.sendCard}}
-        </ion-item>
-
-        <!--Billing Information-->
-        <ion-item menu-close href="#/app/billingInformation">
-          <i class="ion-cash"></i>
-          {{:: app.dictionary.billingInformation}}
-        </ion-item>
-
-        <!--Home-->
-        <ion-item menu-close href="#/app/home">
-          <i class="ion-home"></i>
-          {{:: app.dictionary.home}}
         </ion-item>
 
         <!--Settings-->
