@@ -230,6 +230,7 @@ angular.module('starter.controllers', [])
   })
 
 
+  // Send Card
   .controller('SendCardCtrl', function ($state) {
     var vm= this;
     vm.onSendClick = function(){
